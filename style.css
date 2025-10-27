@@ -4,31 +4,36 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+
 body {
-    background-color: #f5f4ff;
+    background-color: #f2f0ff;
     color: #2c2c2c;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
+
 .cabeçalho {
     width: 100%;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     padding: 20px 60px;
     border: 1px solid #e3ddfc;
 }
+
 .logo {
     color: #7b5cff;
     font-size: 1.4rem;
     font-weight: 700;
 }
+
 .Bemvindo {
     color: #4a4a4a;
     font-size: 1rem;
 }
+
 .tarefas {
     width: 100%;
     max-width: 700px;
@@ -44,6 +49,7 @@ body {
     display: flex;
     gap: 10px;
 }
+
 .entradatarefas input {
     flex: 1;
     padding: 12px;
@@ -54,9 +60,11 @@ body {
     background-color: #ece8ff;
     transition: 0.3s;
 }
+
 .entradatarefas input:focus {
     border-color: #7b5cff;
 }
+
 .entradatarefas button {
     background-color: #7b5cff;
     color: #fff;
@@ -67,31 +75,116 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .entradatarefas button:hover {
     background-color: #6949ff;
 }
-.tasks {
-    margin-top: 40px;
+
+/* Cabeçalho das tarefas */
+.titulo-tarefas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
 }
-.tasks h3 {
-    font-size: 1.1rem;
+
+.titulo-tarefas.show {
+    opacity: 1;
+    transform: translateY(0);
 }
+
+.titulo-tarefas h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.contador {
+    color: #27ae60; /* verde */
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
 .subtitle {
     font-size: 0.9rem;
     color: #666;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-align: left;
 }
+
 .no-tasks {
     text-align: center;
     color: #666;
-    margin-top: 200px;
+    margin-top: 100px;
 }
+
 .no-tasks .emoji {
     font-size: 3rem;
     display: block;
     margin-bottom: 10px;
 }
-.linha{
+
+.tarefa-box {
+    background-color: #eae6ff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.tarefa-box:hover {
+    border-color: #c4b9ff;
+    transform: translateY(-2px);
+}
+
+.tarefa-box.concluida {
+    background-color: #d9ffe4;
+    border-color: #98f3b7;
+}
+
+.tarefa-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tarefa-info input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.tarefa-info span {
+    font-weight: 600;
+}
+
+.tarefa-info small {
+    display: block;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.tarefa-box button {
+    background: none;
+    border: none;
+    color: #7b5cff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tarefa-box button:hover {
+    color: #5a3fff;
+}
+
+.linha {
     margin-top: 30px;
     border-bottom: 1px solid #e3ddfc;
 }
